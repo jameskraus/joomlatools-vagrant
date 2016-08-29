@@ -98,7 +98,6 @@ sub vcl_backend_response {
         if(bereq.http.backend == "alternative")
         {
             set beresp.uncacheable = true;
-            set beresp.ttl = 0s;
 
             return(deliver);
         }
